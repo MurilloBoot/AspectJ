@@ -1,0 +1,12 @@
+public aspect VerificacaoSaldoAspect {
+    pointcut saquePointcut(ContaBancaria conta, double valor):
+        call(void ContaBancaria.sacar(double)) && target(conta) && args(valor);
+
+    before(ContaBancaria conta, double valor): saquePointcut(conta, valor) {
+        if (conta.getSaldo() < valor) {
+            System.out.println("Saldo insuficiente na conta: " + conta);
+        }
+    }
+}
+
+//Verifica Se o saldo da conta é inferior ao valor de saque...

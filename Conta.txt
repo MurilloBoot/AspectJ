@@ -1,0 +1,24 @@
+public class ContaBancaria {
+    private double saldo;
+    
+    public ContaBancaria(double saldoInicial) {
+        this.saldo = saldoInicial;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void depositar(double valor) {
+        saldo += valor;
+    }
+
+    public void sacar(double valor) {
+        saldo -= valor;
+    }
+}
+
+// Outras classes de conta (ContaCorrente, ContaSalario, ContaPoupanca, ContaInvestimento) seriam implementadas de formas equivalentes.
+//Nunca programei em Java, desconsidere erros de sintaxe...
+
+

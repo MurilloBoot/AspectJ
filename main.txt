@@ -1,0 +1,16 @@
+public class SistemaBancario {
+    public static void main(String[] args) {
+        ContaBancaria contaCorrente = new ContaBancaria(1000.0);
+        ContaBancaria contaSalario = new ContaBancaria(500.0);
+        // Criar outras contas
+
+        // Tentativa de saque
+        contaCorrente.sacar(1500.0); // Deve gerar uma mensagem de saldo insuficiente
+        contaSalario.sacar(200.0);   // Deve ser bem-sucedido
+
+        System.out.println("Saldo da conta corrente: " + contaCorrente.getSaldo());
+        System.out.println("Saldo da conta salário: " + contaSalario.getSaldo());
+    }
+}
+
+//walrid3r 
